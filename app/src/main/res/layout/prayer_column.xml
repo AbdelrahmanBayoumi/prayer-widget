@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/prayer_column"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingHorizontal="3dp"
+    android:paddingVertical="4dp">
+
+    <ImageView
+        android:id="@+id/prayer_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:importantForAccessibility="no" />
+
+    <TextView
+        android:id="@+id/prayer_name"
+        style="@style/PrayerText"
+        android:layout_width="match_parent"
+        android:layout_height="19dp"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:textDirection="rtl" />
+
+    <TextView
+        android:id="@+id/prayer_time"
+        style="@style/PrayerText"
+        android:layout_width="match_parent"
+        android:layout_height="17dp"
+        android:layout_marginTop="1dp"
+        android:autoSizeMaxTextSize="11sp"
+        android:gravity="center"
+        android:textColor="#D6DFF2"
+        android:textDirection="rtl" />
+</LinearLayout>

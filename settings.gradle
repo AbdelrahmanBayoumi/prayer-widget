@@ -1,0 +1,28 @@
+pluginManagement {
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.id == 'com.android.application') {
+                useModule("com.android.tools.build:gradle:${requested.version}")
+            }
+        }
+    }
+
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+        mavenLocal {
+            content { includeModule('com.batoulapps.adhan', 'adhan') }
+        }
+    }
+}
+
+rootProject.name = 'PrayerWidget'
+include ':app'

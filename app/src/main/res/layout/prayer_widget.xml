@@ -1,0 +1,106 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/card"
+    android:layoutDirection="ltr"
+    android:orientation="vertical"
+    android:paddingHorizontal="9dp"
+    android:paddingVertical="9dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingHorizontal="3dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="45"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/day"
+                style="@style/PrayerText"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:autoSizeMaxTextSize="21sp"
+                android:gravity="center"
+                android:textDirection="rtl" />
+
+            <TextView
+                android:id="@+id/hijri_date"
+                style="@style/PrayerText"
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:autoSizeMaxTextSize="13sp"
+                android:gravity="center"
+                android:textDirection="rtl" />
+
+            <TextView
+                android:id="@+id/gregorian_date"
+                style="@style/PrayerText"
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:autoSizeMaxTextSize="13sp"
+                android:gravity="center"
+                android:textDirection="rtl" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="55"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/countdown_title"
+                style="@style/PrayerText"
+                android:layout_width="match_parent"
+                android:layout_height="29dp"
+                android:autoSizeMaxTextSize="18sp"
+                android:gravity="right|center_vertical"
+                android:textDirection="rtl" />
+
+            <Chronometer
+                android:id="@+id/countdown"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:countDown="true"
+                android:fontFamily="sans-serif"
+                android:fontFeatureSettings="tnum"
+                android:gravity="right|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="14sp"
+                android:autoSizeMaxTextSize="31sp"
+                android:autoSizeStepGranularity="1sp"
+                android:textColor="#F0F3FF"
+                android:textDirection="ltr" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_marginTop="7dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <include android:id="@+id/slot_isha" layout="@layout/prayer_slot" />
+        <include android:id="@+id/slot_maghrib" layout="@layout/prayer_slot" />
+        <include android:id="@+id/slot_asr" layout="@layout/prayer_slot" />
+        <include android:id="@+id/slot_dhuhr" layout="@layout/prayer_slot" />
+        <include android:id="@+id/slot_sunrise" layout="@layout/prayer_slot" />
+        <include android:id="@+id/slot_fajr" layout="@layout/prayer_slot" />
+    </LinearLayout>
+</LinearLayout>

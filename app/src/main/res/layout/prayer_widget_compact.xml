@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/card"
+    android:layoutDirection="ltr"
+    android:orientation="vertical"
+    android:paddingHorizontal="9dp"
+    android:paddingVertical="9dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:minHeight="42dp"
+        android:gravity="center"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingHorizontal="7dp">
+
+        <Chronometer
+            android:id="@+id/countdown"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="47"
+            android:autoSizeMaxTextSize="29sp"
+            android:autoSizeMinTextSize="14sp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform"
+            android:fontFeatureSettings="tnum"
+            android:gravity="start|center_vertical"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:textColor="#F0F3FF"
+            android:textDirection="ltr" />
+
+        <TextView
+            android:id="@+id/countdown_title"
+            style="@style/PrayerText"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="53"
+            android:layout_marginStart="8dp"
+            android:autoSizeMaxTextSize="19sp"
+            android:gravity="end|center_vertical"
+            android:textAlignment="viewEnd"
+            android:textDirection="rtl" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@drawable/compact_prayers"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <include android:id="@+id/slot_isha" layout="@layout/prayer_slot" />
+        <include android:id="@+id/slot_maghrib" layout="@layout/prayer_slot" />
+        <include android:id="@+id/slot_asr" layout="@layout/prayer_slot" />
+        <include android:id="@+id/slot_dhuhr" layout="@layout/prayer_slot" />
+        <include android:id="@+id/slot_sunrise" layout="@layout/prayer_slot" />
+        <include android:id="@+id/slot_fajr" layout="@layout/prayer_slot" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="29dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/compact_dates"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingHorizontal="7dp">
+
+        <TextView
+            android:id="@+id/gregorian_date"
+            style="@style/PrayerText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="36"
+            android:autoSizeMaxTextSize="12sp"
+            android:gravity="left|center_vertical"
+            android:textDirection="rtl" />
+
+        <TextView
+            android:id="@+id/hijri_date"
+            style="@style/PrayerText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="6dp"
+            android:layout_weight="64"
+            android:autoSizeMaxTextSize="13sp"
+            android:gravity="right|center_vertical"
+            android:textDirection="rtl" />
+    </LinearLayout>
+</LinearLayout>
